@@ -39,7 +39,7 @@ repos:
   - id: mdformat
     exclude: |
       (?x)^(
-        LICENSE
+        LICENSE |
         lib/.*
       )$
     additional_dependencies: [mdformat-gfm, mdformat-frontmatter]
