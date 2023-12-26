@@ -1,6 +1,6 @@
 // NVH's Temperature and Humidity Sensor
 // Author: NVH
-// 
+//
 // Notes:
 // - This is a simple temperature and humidity sensor that uses a DHT22 sensor and a Heltec Wifi Kit 32
 // - to update boot logo use GNU Image Manipulation Program with xbm type export, then grab the raw hex from that (open in vscode)
@@ -15,7 +15,7 @@
 #include "time.h"
 
 // App constants
-const char* VERSION = "0.5.1"; 
+const char* VERSION = "0.5.1";
 const char* APPNAME = "NVH_TEMP/HUM";
 
 // NTP settings
@@ -158,7 +158,7 @@ void setup()
 
 	int startupTaskCount = 3;
 	int startupTask = 0;
-  
+
 	pinMode(LED,OUTPUT);
 	digitalWrite(LED,HIGH);
 
@@ -173,7 +173,7 @@ void setup()
 	Heltec.display->display();
 	bootBar(startupTask, startupTaskCount);
   delay(2000);
-  
+
 
 	// setup DHT
 	dht.begin();
@@ -192,12 +192,12 @@ void setup()
 	startupTask = 3;
   bootBar(startupTask, startupTaskCount);
 	delay(500);
-  
+
 	// reset settings - wipe stored credentials
 	// these are stored by the esp library
 	// if GPIO0 is held low during boot, clear the stored settings
 	int resetCountdown = 10;
-	if (digitalRead(0) == LOW)	
+	if (digitalRead(0) == LOW)
 	{
 		// while GPIO0 stays low carry on with countdown
 		while (digitalRead(0) == LOW && resetCountdown > 0)
@@ -245,7 +245,7 @@ void setup()
 	// Automatically connect using saved credentials,
   // if connection fails, it starts an access point with random name suffix and random password
 	// then goes into a blocking loop awaiting configuration and will return success result
-  
+
 	bool res;
 	res = wm.autoConnect(randomAP.c_str(), randomCode.c_str()); // password protected ap
 
@@ -254,9 +254,9 @@ void setup()
 			Heltec.display->drawString(0, 40, "WiFi Not Connected");
 			Heltec.display->display();
 			// ESP.restart();
-	} 
+	}
 	else {
-			//if you get here you have connected to the WiFi    
+			//if you get here you have connected to the WiFi
 			Serial.println("connected...yeey :)");
 			Heltec.display->drawString(0, 40, "WiFi - IP: ");
 			Heltec.display->drawString(60, 40, WiFi.localIP().toString());
@@ -281,7 +281,7 @@ void setup()
 
 	// turn the led off, its very bright
 	digitalWrite(LED,LOW);
-  
+
 }
 
 void loop()
@@ -311,4 +311,3 @@ void loop()
 	Heltec.display -> display();
 	delay(2000);
 }
-
