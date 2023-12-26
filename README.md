@@ -67,7 +67,7 @@
 
 This is the codebase for my ESP32 based Temperature Humidity Sensor units.
 
-It uses the HTIT-WiFi kit32 V3(Rev1.1) and a DHT22 sensor package. 
+It uses the HTIT-WiFi kit32 V3(Rev1.1) and a DHT22 sensor package.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 

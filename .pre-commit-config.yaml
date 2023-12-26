@@ -2,12 +2,37 @@ repos:
 - repo: https://github.com/pre-commit/pre-commit-hooks
   rev: v4.3.0
   hooks:
+  - id: check-json
+    exclude: |
+      (?x)^(
+        lib/.*
+      )$
   - id: pretty-format-json
     args: [--autofix, --indent, '2']
+    exclude: |
+      (?x)^(
+        lib/.*
+      )$
   - id: check-yaml
+    exclude: |
+      (?x)^(
+        lib/.*
+      )$
   - id: end-of-file-fixer
+    exclude: |
+      (?x)^(
+        lib/.*
+      )$
   - id: trailing-whitespace
+    exclude: |
+      (?x)^(
+        lib/.*
+      )$
   - id: check-toml
+    exclude: |
+      (?x)^(
+        lib/.*
+      )$
 - repo: https://github.com/executablebooks/mdformat
   rev: 0.7.16
   hooks:
@@ -15,6 +40,7 @@ repos:
     exclude: |
       (?x)^(
         LICENSE
+        lib/.*
       )$
     additional_dependencies: [mdformat-gfm, mdformat-frontmatter]
 - repo: https://github.com/macisamuele/language-formatters-pre-commit-hooks
@@ -22,3 +48,7 @@ repos:
   hooks:
   - id: pretty-format-yaml
     args: [--autofix, --indent, '2', --line-width, '120']
+    exclude: |
+      (?x)^(
+        lib/.*
+      )$
