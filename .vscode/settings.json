@@ -1,10 +1,14 @@
 {
   "cSpell.words": [
+    "autofix",
     "bootlogo",
     "DHTPIN",
     "DHTTYPE",
+    "frontmatter",
     "GPIO",
     "Heltec",
+    "HTIT",
+    "mdformat",
     "NVH's",
     "PROGMEM",
     "rawliteral"
