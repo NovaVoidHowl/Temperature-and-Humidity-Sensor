@@ -137,9 +137,9 @@ Distributed under the LGPL License. See `LICENSE.md` for more information.
 
 ## Contact
 
-Your Name - [@NovaVoidHowl](https://novavoidhowl.uk/)
+[@NovaVoidHowl](https://novavoidhowl.uk/)
 
-Project Link: [https://repo.Temperature-and-Humidity-Sensor.uk](https://repo.Temperature-and-Humidity-Sensor.uk)
+Project Link: [https://temperatureandhumiditysensor.dev.novavoidhowl.uk](https://temperatureandhumiditysensor.dev.novavoidhowl.uk)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
